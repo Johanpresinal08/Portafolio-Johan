@@ -15,7 +15,7 @@ html {
 /* ===== BODY ===== */
 body {
     background-color: #0d0d0d;
-    background-image: url(Escritorio.jpg);
+    background-image: url(images/Escritorio.jpg);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -191,20 +191,18 @@ span {
     color: #ddd;
 }
 
-.sobre-mi-img {
-    width: 100%;
-    margin-top: 4rem;
-    margin-bottom: 2rem;
+.sobre-mi-video {
+    max-width: 700px;
+    margin: 4rem auto 0;
     border-radius: 1rem;
     overflow: hidden;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
-.sobre-mi-img img {
+.sobre-mi-video video {
     width: 100%;
     height: auto;
     display: block;
-    object-fit: cover;
 }
 
 /* ===== HABILIDADES ===== */
@@ -333,7 +331,7 @@ span {
 .video-embed {
     position: relative;
     width: 100%;
-    height: 480px;
+    height: 580px;
     overflow: hidden;
     background-color: #000;
 }
@@ -345,6 +343,20 @@ span {
     width: 100%;
     height: 580px;
     border: 0;
+}
+
+/* Videos locales (galería) con autoplay al hacer scroll */
+.video-embed.local {
+    height: 480px;
+}
+
+.video-embed.local video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .video-info {
@@ -374,6 +386,89 @@ span {
 }
 
 .videos-cta a:hover {
+    text-decoration: underline;
+}
+
+/* ===== COLABORACIONES ===== */
+.colab-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.colab-card {
+    background-color: #161616;
+    border-radius: 1rem;
+    padding: 2.5rem 1.5rem;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    transition: 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+.colab-card img {
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+    border-radius: 50%;
+    background-color: #fff;
+    padding: 0.8rem;
+}
+
+.colab-card h3 {
+    font-size: 1.5rem;
+    color: white;
+}
+
+.colab-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 20px #b74b4b;
+}
+
+.colab-video-embed {
+    position: relative;
+    width: 100%;
+    max-width: 280px;
+    aspect-ratio: 9 / 16;
+    margin: 0 auto;
+    border-radius: 0.8rem;
+    overflow: hidden;
+    background-color: #000;
+}
+
+.colab-video-embed iframe {
+    position: absolute;
+    top: -55px;
+    left: 0;
+    width: 100%;
+    height: calc(100% + 130px);
+    border: 0;
+}
+
+.colab-video-embed.local video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.colab-link {
+    font-size: 1.4rem;
+    color: #b74b4b;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.colab-link:hover {
     text-decoration: underline;
 }
 
