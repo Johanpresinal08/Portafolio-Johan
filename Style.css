@@ -39,7 +39,9 @@ body {
 
 .logo {
     width: 60px;
-    height: auto;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 50%;
     cursor: pointer;
     transition: 0.4s ease;
 }
@@ -131,6 +133,8 @@ span {
     width: 28vw;
     max-width: 320px;
     min-width: 200px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
     border-radius: 50%;
     box-shadow: 0 0 25px #b74b4b;
     transition: 0.3s ease;
@@ -193,6 +197,7 @@ span {
 
 .sobre-mi-video {
     max-width: 700px;
+    aspect-ratio: 16 / 9;
     margin: 4rem auto 0;
     border-radius: 1rem;
     overflow: hidden;
@@ -201,7 +206,8 @@ span {
 
 .sobre-mi-video video {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
     display: block;
 }
 
@@ -430,12 +436,18 @@ span {
     box-shadow: 0 0 20px #b74b4b;
 }
 
+.colab-videos-row {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
 .colab-video-embed {
     position: relative;
     width: 100%;
-    max-width: 280px;
+    max-width: 130px;
     aspect-ratio: 9 / 16;
-    margin: 0 auto;
     border-radius: 0.8rem;
     overflow: hidden;
     background-color: #000;
